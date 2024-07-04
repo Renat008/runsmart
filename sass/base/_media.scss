@@ -1,0 +1,43 @@
+@media screen and (max-width: 991.5px) {
+    .container {
+        width: 695px;
+    }
+    .promo {
+        &__header {
+            font-size: 35px;
+            line-height: 29px;
+        }
+        &__subheader {
+            margin-top: 11px;
+            font-size: 20px;
+        }
+        .header__logo {
+            width: 200px;
+        }
+        .header__phone {
+            font-size: 16px;
+        }
+        .button_main {
+            width: 249px;
+            height: 43px;
+            font-size: 14px;
+            margin-top: 61px;
+        }
+        &__link {
+            margin-top: 16px;
+            font-size: 15px;
+        }
+    }
+    .advantages {
+        padding: 54px 0 54px 0;
+        &__header {
+            font-size: 27px;
+        }
+        &__wrapper {
+            margin-top: 50px;
+        }
+        &__item {
+            min-width: 230px;
+        }
+    }
+}

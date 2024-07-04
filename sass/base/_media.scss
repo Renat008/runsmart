@@ -40,6 +40,15 @@
             min-width: 230px;
         }
     }
+    .consultation {
+        .title_left {
+            font-size: 25px;
+        }
+        &__descr {
+            font-size: 17px;
+        }
+    }
+    
 }
 
 @media (max-width: 767.5px){
@@ -105,6 +114,16 @@
         &__descr {
             margin-top: 20px;
             font-size: 12px;
+        }
+    }
+    .consultation {
+        min-height: 570px;
+        padding: 70px 0 50px 0;
+        .title_left {
+            font-size: 21px;
+        }
+        &__descr {
+            font-size: 15px;
         }
     }
 }
@@ -175,6 +194,29 @@
             margin-top: 12px;
             font-size: 12px;
             margin-bottom: 10px;
+        }
+    }
+    .consultation {
+        min-height: 465px;
+        padding: 70px 0 50px 0;
+        .title_left {
+            font-size: 13px;
+            text-align: center;
+        }
+        &__descr {
+            font-size: 12px;
+            text-align: center;
+        }
+        .feed-form {
+            width: 280px;
+            input {
+                height: 40px;
+            }
+            .button {
+                &_submit {
+                    height: 45px;
+                }
+            }
         }
     }
 }

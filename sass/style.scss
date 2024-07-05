@@ -6,11 +6,13 @@
 @import 'blocks/title';
 @import 'blocks/consultation';
 @import 'blocks/forms';
+@import 'blocks/carousel';
 @import 'base/media';
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
 .container {
+    position: relative;
     max-width: 950px;
     margin: 0 auto;
 }

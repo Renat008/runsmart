@@ -33,6 +33,8 @@
         display: flex; // поставить кнопки в ряд
         justify-content: center; // выровнять по центру
         list-style: none; // убираем черные маркеры
+        padding-left: 0;
+    
     }
     .slick-dots button {
         background: #eddfd477; // цвет фона

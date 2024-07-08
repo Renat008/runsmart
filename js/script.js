@@ -13,7 +13,8 @@ $(document).ready(function(){
               dots: true,
               arrows: false,
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+
             }
         }]
         // autoplay: true,

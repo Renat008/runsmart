@@ -48,6 +48,14 @@
             font-size: 17px;
         }
     }
+    .carousel {
+        &__inner {
+            width: 650px;
+        }
+        img {
+            width: 100%;
+        }
+    }
     
 }
 
@@ -125,6 +133,64 @@
         &__descr {
             font-size: 15px;
         }
+    }
+    .carousel {
+        padding: 40px 0;
+        &__inner {
+            width: 540px;
+        }
+        img {
+            width: 100%;
+        }
+        .slick-dots {
+            width: 510px;
+            // position: absolute;
+            // left: -1.5%;
+        }
+    }
+    .catalog {
+        .title {
+            font-size: 25px;
+        }
+        &__tabs {
+            margin-top: 50px;
+        }
+        &__tab {
+            width: 150px;
+            height: 40px;
+            font-size: 14px;
+            line-height: 40px;
+        }
+
+        &__content {
+            margin-top: 50px;
+            justify-content: space-around;
+        }
+        &-item {
+            width: 250px;
+            &__img {
+                height: 170px;
+            }
+            &__subtitle {
+                margin-top: 18px;
+
+            }
+            &__old-price {
+                font-size: 13px;
+            }
+            &__price {
+                font-size: 18px;
+            }
+            &__descr {
+                font-size: 13px;
+            }
+        }
+        .button_mini {
+            width: 85px;
+            height: 30px;
+            line-height: 30px;
+        }
+
     }
 }
 
@@ -218,5 +284,38 @@
                 }
             }
         }
+    }
+    .carousel {
+        padding: 40px 0;
+        &__inner {
+            width: 280px;
+        }
+        img {
+            width: 100%;
+        }
+        .slick-dots {
+            width: 250px;
+            // position: absolute;
+            // left: -1.5%;
+        }
+    }
+    .catalog {
+        .title {
+            font-size: 18px;
+        }
+        &__tabs {
+            margin-top: 35px;
+        }
+        &__tab {
+            width: 73px;
+            height: 36px;
+            font-size: 8px;
+            line-height: 36px;
+        }
+
+        // &__content {
+        //     margin-top: 50px;
+        //     justify-content: space-around;
+        // }
     }
 }

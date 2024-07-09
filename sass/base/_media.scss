@@ -56,12 +56,31 @@
             width: 100%;
         }
     }
-    
+    .feedback {
+        &__img {
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                object-fit:cover;
+            }
+            margin-right: 20px;
+        }
+        &__txt {
+            width: 530px;
+            margin-top: 13px;
+            font-size: 13px;
+            color: #0d0d0d;
+            font-weight: 500;
+        }
+    }
 }
 
 @media (max-width: 767.5px){
     .container {
         width: 540px;
+        padding-right: 0px; 
+        padding-left: 0px;
     }
     .promo {
         background-position: 31%;
@@ -143,7 +162,7 @@
             width: 100%;
         }
         .slick-dots {
-            width: 510px;
+            width: 540px;
             // position: absolute;
             // left: -1.5%;
         }
@@ -190,13 +209,32 @@
             height: 30px;
             line-height: 30px;
         }
-
+    }
+    .feedback {
+        &__img {
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                object-fit:cover;
+            }
+            margin-right: 10px;
+        }
+        &__txt {
+            width: 400px;
+            margin-top: 13px;
+            font-size: 11px;
+            color: #0d0d0d;
+            font-weight: 500;
+        }
     }
 }
 
 @media (max-width: 575.5px) {
     .container {
         width: 280px;
+        padding-right: 0px; 
+        padding-left: 0px;
     }
     .promo {
         &__header {
@@ -294,12 +332,13 @@
             width: 100%;
         }
         .slick-dots {
-            width: 250px;
+            width: 280px;
             // position: absolute;
             // left: -1.5%;
         }
     }
     .catalog {
+        padding: 0 0 50px 0;
         .title {
             font-size: 18px;
         }
@@ -312,10 +351,32 @@
             font-size: 8px;
             line-height: 36px;
         }
+    }
+    .feedback {
+        &__wrapper {
+            flex-direction: column;
+            margin: 35px 0 15px 0;
+        }
+        .title {
+            font-size: 20px;
+        }
+        &__subtitle {
+            margin-top: 10px;
+            text-align: center;
+        }
+        &__count {
+            margin-top: 5px;
+            text-align: center;
+        }
+        &__img {
+            text-align: center;
+            margin-right: 0px;
+        }
 
-        // &__content {
-        //     margin-top: 50px;
-        //     justify-content: space-around;
-        // }
+        &__txt {
+            width: 280px;
+            margin-top: 9px;
+            font-size: 11px;
+        }
     }
 }

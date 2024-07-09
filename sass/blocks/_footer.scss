@@ -26,8 +26,9 @@
         margin-bottom: 38px;
         font-weight: 700;
         &:hover {
-            color:#ffffff;
+            color: black;
             text-decoration: none;
+            transition: 0.5s all;
         }
     }
     &__social-item {
@@ -42,6 +43,12 @@
         img {
             height: 27px;
         }
+        &:hover {
+            box-shadow: 3px 3px 20px black;
+            transition: 0.5s all;
+            background-color: black;
+            border: none;
+        }
     }
     &__social {
         margin: 0 auto;
@@ -49,5 +56,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    &__map_phone {
+        display: none;
     }
 }

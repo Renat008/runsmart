@@ -47,9 +47,16 @@
         font-weight: 500;
         margin-top: 18px;
         a {
-            // text-decoration: underline;
+            text-decoration: underline;
             text-transform: uppercase;
             color: #ffffff;
+            &:hover {
+                // box-shadow: 3px 3px 20px black;
+                transition: 0.5s all;
+                color: black;
+                text-decoration: none;
+            }
         }
+        
     }
 }

@@ -280,6 +280,34 @@
             display: block;
         }
     }
+    .mymodal {
+        width: 233px;
+        padding: 10px 15px 15px 15px;
+        min-height: 270px;
+        .feed-form {
+            input {
+                height: 30px;
+                font-size: 12px;
+            }
+        }
+        &__subtitle {
+            font-size: 12px;
+        }
+        &__descr {
+            font-size: 10px;
+        }
+        .button {
+            &_submit {
+                height: 33px;
+                font-size: 12px;
+            }
+        }
+        &__close {
+            right: -30px;
+            font-size: 30px;
+            line-height: 20px;
+        }
+    }
 }
 
 @media (max-width: 575.5px) {
@@ -463,6 +491,34 @@
         }
         &__map_phone {
             display: block;
+        }
+    }
+    .mymodal {
+        width: 233px;
+        padding: 10px 15px 15px 15px;
+        min-height: 270px;
+        .feed-form {
+            input {
+                height: 30px;
+                font-size: 12px;
+            }
+        }
+        &__subtitle {
+            font-size: 12px;
+        }
+        &__descr {
+            font-size: 10px;
+        }
+        .button {
+            &_submit {
+                height: 33px;
+                font-size: 12px;
+            }
+        }
+        &__close {
+            right: -30px;
+            font-size: 30px;
+            line-height: 20px;
         }
     }
 }

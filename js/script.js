@@ -29,21 +29,6 @@ $(document).ready(function(){
         .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
 
-      // $('.catalog-item__link').each(function (i) {
-      //   $(this).on('click', function (e) {
-      //     e.preventDefault();
-      //     $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-      //     $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-      //   })
-      // });
-      // $('.catalog-item__back').each(function (i) {
-      //   $(this).on('click', function (e) {
-      //     e.preventDefault();
-      //     $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-      //     $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-      //   })
-      // });
-
     function toggleSlide(item) {
       $(item).each(function (i) {
         $(this).on('click', function (e) {
@@ -56,35 +41,81 @@ $(document).ready(function(){
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
 
-      // modal
+    // modal
 
-    $('[data-modal=consultation]').on('click', function() {
-      $('.overlay, #consultation').fadeIn('slow');
+    $('[data-modal=consultation]').on('click', function() { // получаем данные с дата атрибута consultation
+      $('.overlay, #consultation').fadeIn('slow'); // получаем overlay и конкретное модальное окно consultation, и тк он изначально скрыт -> fadeIn
     });
-    $('.mymodal__close').on('click', function() {
-      $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    $('.mymodal__close').on('click', function() { // обращаемся к крестику и закрываем окно
+      $('.overlay, #consultation, #order, #thanks').fadeOut('slow'); // закрывать будем все элементы: .overlay, #consultation, #order, #thanks
     });
-    $('.button_mini').each(function(i) {
-      $(this).on('click', function() {
-        $('#order .mymodal__descr').text($('.catalog-item__subtitle').eq(i).text());
+    $('.button_mini').each(function(i) { // для каждого .button_mini
+      $(this).on('click', function() { 
+        $('#order .mymodal__descr').text($('.catalog-item__subtitle').eq(i).text()); // получаем текст из .catalog-item__subtitle и записываем его в .mymodal__descr
         $('.overlay, #order').fadeIn('slow');
       })
     });
+
+    // valid
+
+    function validateForms(form) {
+      $(form).validate({
+        rules: {
+          name: 'required',
+          phone: 'required',
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          name: "Пожалуйста, введите свое имя",
+          phone: "Пожалуйста, введите свой номер телефона",
+          email: {
+            required: "Пожалуйста, введите свою почту",
+            email: "Корректно введите почту (пример: name@domain.com)"
+          }
+        }
+      });
+    };
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    $('form').submit(function(e) { // при отправке формы
+      e.preventDefault(); // отменяем стандартное поведение браузера
+      $.ajax ({
+        type: "POST", // POST - отдача данных
+        url: "mailer/smart.php", // путь к PHP
+        data: $(this).serialize() // данные с текущей формы (в нужном формате)
+      }).done(function(){
+        $(this).find("input").val("") // очищаем форму
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+        $('form').trigger('reset'); // очистка формы
+      });
+      return false;
+    });
+
+    // pageup scroll
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 1600){
+        $('.pageup').fadeIn();
+      } else {
+        $('.pageup').fadeOut();
+      }
+    });
+
+    // плавный скроллинг вверх
+
+    $("a[href^='#up']").click(function(){ // получаем все ссылки с атрибутом href начинающиеся с #up и запускаем функцию
+      const _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+      return false;
+    });
+
+    new WOW().init();
 });
-
-// const slider = tns({
-//     container: '.carousel__inner',
-//     items: 1,
-//     slideBy: 'page',
-//     controls: false,
-//     autoplay: false,
-//     nav: false,
-//   });
-
-// document.querySelector('.prev').addEventListener('click', function () {
-//     slider.goTo('prev');
-// });
-
-// document.querySelector('.next').addEventListener('click', function () {
-//     slider.goTo('next');
-// });

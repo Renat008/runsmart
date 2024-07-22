@@ -284,6 +284,9 @@
         width: 233px;
         padding: 10px 15px 15px 15px;
         min-height: 270px;
+        &_mini {
+            min-height: 70px;
+        }
         .feed-form {
             input {
                 height: 30px;
@@ -497,6 +500,9 @@
         width: 233px;
         padding: 10px 15px 15px 15px;
         min-height: 270px;
+        &_mini {
+            min-height: 70px;
+        }
         .feed-form {
             input {
                 height: 30px;

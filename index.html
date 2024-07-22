@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <div class="header__logo">
@@ -25,6 +26,7 @@
                 </div>
                 <div class="header__contacts">
                     <a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a>
+                    <!-- data-аттрибуты тут нужны для того чтобы передать данные в модальное окно и объединить две кнопки, которые открывают одно и то же модальное окно -->
                     <button data-modal="consultation" class="button">заказать звонок</button>
                 </div>
             </header>
@@ -53,7 +55,7 @@
                     </div>
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/advantages/heart.png" alt="heart">
+                    <img src="icons/advantages/heart.png" alt="heart" class="advantages__heart_animated">
                     <div class="advantages__subtitle">Заботимся о здоровье</div>
                     <div class="advantages__descr">
                         Мы работаем для того, 
@@ -82,17 +84,17 @@
                 Просто заполните форму заявки<br>
                 и мы перезвоним вам в течении 10 минут
             </div>
-            <form class="feed-form" action="#">
+            <form id="consultation-form" class="feed-form feed-form_big" action="#">
                 <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input nema="email" placeholder="Ваш E-mail" type="email">
+                <input name="phone" required placeholder="Ваш телефон" type="tel">
+                <input name="email" placeholder="Ваш E-mail" type="email">
 
                 <!-- <input type="submit" value="заказать консультацию"> -->
                 <button class="button button_submit">заказать консультацию</button>
             </form>
         </div>
     </section>
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div><img src="img/clock/clock_main.jpg" alt="1"></div>
@@ -102,7 +104,7 @@
             <!-- <button type="button" class="prev"><img src="icons/left.svg"></button>
             <button type="button" class="next"><img src="icons/right.svg"></button> -->
         </div>
-    </section>
+    </div>
 
     <section class="catalog">
         <div class="container">
@@ -359,7 +361,7 @@
     <section class="feedback">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="feedback__wrapper">
+            <div class="feedback__wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                 <div class="feedback__img">
                     <img src="img/otzyv/irina.jpg" alt="feedback">
                 </div>
@@ -376,7 +378,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feedback__wrapper">
+            <div class="feedback__wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                 <div class="feedback__img">
                     <img src="img/otzyv/ivan.jpg" alt="feedback">
                 </div>
@@ -391,7 +393,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feedback__wrapper">
+            <div class="feedback__wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                 <div class="feedback__img">
                     <img src="img/otzyv/uliya.jpg" alt="feedback">
                 </div>
@@ -420,7 +422,7 @@
         <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A30a5b4d2acce47a202252bab100a9ebef26347809e7e331c6f29d62b9abf169d&amp;source=constructor" width="100%" height="630" frameborder="0" scroll=false></iframe> -->
         <div class="footer__info">
             <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
-            <a class='footer__phone'href="tell:+749992345678">8 (499) 234-56-78</a>
+            <a class='footer__phone' href="tell:+749992345678">8 (499) 234-56-78</a>
             <div class="footer__social">
                 <a href="#" class="footer__social-item"><img src="icons/social/facebook.svg" alt="facebook"></a>
                 <a href="#" class="footer__social-item"><img src="icons/social/instagram.svg" alt="inst"></a>
@@ -435,9 +437,9 @@
             <div class="mymodal__subtitle">Просто заполните форму заявки</div>
             <div class="mymodal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input nema="email" placeholder="Ваш E-mail" type="email">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон" type="tel">
+                <input name="email" placeholder="Ваш E-mail" type="email">
                 <button class="button button_submit">заказать консультацию</button>
             </form>
         </div>
@@ -447,9 +449,9 @@
             <div class="mymodal__subtitle">Ваш заказ:</div>
             <div class="mymodal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input nema="email" placeholder="Ваш E-mail" type="email">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон" type="tel">
+                <input name="email" placeholder="Ваш E-mail" type="email">
                 <button class="button button_submit">купить</button>
             </form>
         </div>
@@ -460,11 +462,18 @@
             <div class="mymodal__descr">Наш менеджер свяжется с вами в ближайшее время</div>
         </div>
     </div>
+    <a href="#up" class="pageup">
+        <img src="icons/circle-chevron-up-solid.svg" alt="up">
+    </a>
+    
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

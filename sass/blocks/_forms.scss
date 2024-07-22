@@ -21,4 +21,16 @@
     &_mt25 {
         margin-top: 25px;
     }
+    &_big {
+        width: 300px;
+    }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        margin-bottom: 15px;
+        text-align: center;
+        border: none;
+        color: rgb(204, 18, 18);
+    }
 }
